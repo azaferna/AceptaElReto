@@ -47,8 +47,8 @@ int main()
     int casos;
     cin >> casos;
     while(casos != 0){
-        long long elementos  = 0;
-        long long parejas = 0;
+        long long elementos  = 0; //Ojo con el long en el enunciado dice que cada pais puede tener 10^9 partcipantes
+        long long parejas = 0; //Ojo con el long en el enunciado dice que pueden formarse hasta 10^18 parejas
         int pais[N];
         for (int i = 0; i < casos; i++){
             cin >> pais[i];
