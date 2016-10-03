@@ -25,7 +25,6 @@ Ejemplo
 4
 
 */
-
 #include<iostream>
 using namespace std;
 int main()
@@ -34,7 +33,7 @@ int main()
     int fact = 0;
     int total = 1;
     cin >> casos;
-
+    
     for(int i = 0; i < casos; i++){
         total = 1;
         cin >> fact;
@@ -48,7 +47,7 @@ int main()
             cout << 6 << "\n";
         if(fact == 4)
             cout << 4 << "\n";
-        if(fact >= 5 ) // A partir del cinco el resultado siempre es 0
+        if(fact >= 5 )// A partir del cinco el resultado siempre es 0
             cout << 0 << "\n";
     }
     return 0;
