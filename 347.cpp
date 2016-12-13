@@ -1,34 +1,31 @@
+
 #include<iostream>
 using namespace std;
 
-int pajaritas(int x, int y);
+int meteLasBolas(int desde, int hasta, int n);
 
 int main()
 {
-
-    int x = 0, y = 0;
+    int z;
+    cin >> z;
     
-    cin >> x >> y;
-    
-    while( x != 0 && y != 0){
-        cout << pajaritas(x, y) << endl;
-        cin >> x >> y;
-    }
-
-}
-
-int pajaritas(int x, int y){
-    
-    if((x < 10) || (y < 10))
-        return 0;
-    
-    else if  ( x == y )
-       return 1;
-    else{
-        if(x > y)
-            return pajaritas(x%y, y) + x/y;
+    while (cin) {
+       if(z >0)
+        cout << meteLasBolas(0, z, 1) << endl;
         else
-            return pajaritas(x,y%x) + y/x;
+            cout << 0 << endl;
+        
+        cin >> z;
     }
+
 }
 
+int meteLasBolas(int desde, int hasta, int n){
+    int cuantas = (desde + hasta) /2;
+    if(cuantas >= 1){
+        n = meteLasBolas(desde, (desde + hasta)/2, n);
+        return n +1;
+    }
+    else
+        return 1;
+}
